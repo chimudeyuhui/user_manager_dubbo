@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    用户名:<input name="username"/><br/>
+    密码:<input name="password"/><br/>
+    昵称:<input name="name"/><br/>
+    所有邮箱:<select name="emailid">
+                <option th:each="ema : ${emails}" th:value="${ema.id}" th:text="${ema.emailname}"></option>
+            </select>
+    <button>添加</button>
+</form>
+</body>
+</html>
